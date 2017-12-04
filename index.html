@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <meta charset = "UTF-8">
+      <title>Pomodoro</title>
+     <script type="text/javascript" src="clock.js"></script>
+      <link rel="stylesheet" href="style.css">
+
+
+   </head>
+
+   <body  onload="show()">
+
+    <div class="container">
+
+      <div class="display">
+        <span id="display-m"></span><span> </span><span id="display-s"></span><span id="display-s2"></span>
+      </div>
+
+
+      <div class="controls">
+
+        <button id="start-stop" onclick="startCount()">Iniciar</button>
+       <button onclick="reset()">Reiniciar</button>
+       <button type="button" onclick="window.close()">close</button>
+
+       <div class="playpause">
+         <input onclick="startCount()"type="checkbox" value="" id="playpause" name="check" />
+         <label for="playpause" tabindex=1></label>
+       </div>
+
+      </div>
+
+
+    </div>
+
+
+   </body>
+</html>
