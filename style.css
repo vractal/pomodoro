@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: "Helvetica", sans-serif;
 
 }
 
@@ -15,6 +16,7 @@ div.container {
   height: 500px;
   width: 500px;
   border: 10px solid black;
+
 }
 
 .display {
@@ -25,35 +27,37 @@ div.container {
 }
 
 
-div.controls {
+div.controls button {
+  border: none;
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  background-color: #0275D8;
+
+}
+div.controls .start {
+  border: none;
+  background-color: #5CB85C;
 
 }
 
+div.controls .stop {
+  background-color: #D9534F;
+
+}
+.controls .off {
+  background-color: gray;
+}
+
+.controls #close {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  color: #D9534F;
+  background-color: transparent;
+}
 /* NOTE: TEMPORARIO PAUSE BUTAO */
-
-
-.playpause label {
-  display: block;
-  box-sizing: border-box;
-  width: 0;
-  height: 74px;
-  border-color: transparent transparent transparent red;
-  transition: 100ms all ease;
-  cursor: pointer;
-  border-style: double;
-  border-width: 0px 0 0px 60px;
-
-}
-.playpause input[type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-
-}
-.playpause input[type="checkbox"]:checked + label {
-  border-style: solid;
-  border-width: 37px 0 37px 60px;
-    border-color: transparent transparent transparent green;
-}
-.playpause input[type="checkbox"]:focus + label {
-  box-shadow: 0 0 5px lightblue;
-}

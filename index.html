@@ -21,14 +21,10 @@
 
       <div class="controls">
 
-        <button id="start-stop" onclick="startCount()">Iniciar</button>
+      <button id="start-stop" class="start" onclick="startCount()">Iniciar</button>
        <button onclick="reset()">Reiniciar</button>
-       <button type="button" onclick="window.close()">close</button>
+       <button type="button" id="close" onclick="window.close()">X</button>
 
-       <div class="playpause">
-         <input onclick="startCount()"type="checkbox" value="" id="playpause" name="check" />
-         <label for="playpause" tabindex=1></label>
-       </div>
 
       </div>
 
