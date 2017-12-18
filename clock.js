@@ -4,6 +4,17 @@
 // criar um objeto pra guardar as funcoes e estados
 
 
+let mode = { "pomo": true, "break": false, "timePomo": 1500, "timeBreak":300}
+mode.current = function() { if (this.pomo) { return this.timePomo;
+
+} else if (this.break) {
+  return this.timeBreak;
+} else {
+  return 0; console.log("Erro metodo current");
+}
+ }
+console.log( mode.current());
+
 let timeAvailable = 1500;
 let running = false
 let count;
@@ -56,8 +67,30 @@ function stopCount() {
 function reset() {
   document.getElementById("start-stop").setAttribute("onclick", "startCount()");
   document.getElementById("start-stop").setAttribute("class", "start");
-  timeAvailable = 1500;
+  timeAvailable = mode.current();
   stopCount();
   show();
 
+}
+
+function time() {
+  button = document.getElementById('tempo');
+
+  reset()
+
+  if (mode.pomo) {
+    timeAvailable = mode.timeBreak;
+    mode.pomo = false;
+    mode.break = true;
+    button.innerHTML = "Pausa"
+
+
+  } else if (mode.break) {
+      timeAvailable = mode.timePomo;
+      mode.pomo = true;
+      mode.break = false;
+      button.innerHTML = "Pomo"
+
+    }
+  show()
 }

@@ -46,6 +46,15 @@ div.controls .stop {
   background-color: #D9534F;
 
 }
+ #time {
+  background-color: #F0AD4E;
+
+}
+
+#time:hover {
+ background-color: #F0AD4E;
+ cursor: wait;
+}
 .controls .off {
   background-color: gray;
 }
