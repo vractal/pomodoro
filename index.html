@@ -14,7 +14,7 @@
 
     <div class="container">
 
-      <div class="display">
+      <div id="display" class="display">
         <span id="display-m"></span><span> </span><span id="display-s"></span><span id="display-s2"></span>
       </div>
 
@@ -24,7 +24,25 @@
       <button id="start-stop" class="start" onclick="startCount()">Iniciar</button>
        <button onclick="reset()">Reiniciar</button>
        <button type="button" id="close" onclick="window.close()">X</button>
-       <button type="button" name="button" id="time" onclick="time()">Pomo</button>
+       <button type="button" id="time" onclick="time()">Pomo</button>
+       <br>
+       <button type="button"  class="off" id="cronometer" onclick="cronometer()"></button> <span>  Cronometro</span>
+       <br>
+
+       <div class="tasks">
+         <input id="task" type="text" name="task" value="">
+         <button id="showhistory" type="button" onclick="showHistory()">...</button>
+
+       </div>
+
+
+       <div id="relatory" style="display: none;">
+         <ol id="history">
+           
+         </ol>
+          <button id="hidehistory" type="button" onclick="hideHistory()">...</button>
+
+       </div>
 
 
       </div>

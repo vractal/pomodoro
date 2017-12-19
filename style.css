@@ -55,10 +55,13 @@ div.controls .stop {
  background-color: #F0AD4E;
  cursor: wait;
 }
-.controls .off {
-  background-color: gray;
+.controls .deactivated {
+  background-color: gray !important;
 }
 
+.display.after *{
+  color: red;
+}
 .controls #close {
   position: fixed;
   top: 5px;
@@ -68,5 +71,85 @@ div.controls .stop {
   font-weight: bold;
   color: #D9534F;
   background-color: transparent;
+}
+
+
+#cronometer {
+    margin-left: 10px;
+    margin-top: 20px;
+    background: green;
+    cursor: pointer;
+    height: 30px;
+    border: 2px solid black;
+    border-left-width: 30px;
+    padding: 0 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+#cronometer.off {
+    background: red !important;
+    border-left-width: 2px;
+    border-right-width: 30px;
+}
+#relatory {
+
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: 2px solid seashell;
+  border-radius: 5px;
+
+}
+
+#history  {
+
+  padding: 50px;
+}
+
+#showhistory {
+  margin: 1px 4px;
+  font-size: 26px;
+  padding: 0px 5px;
+}
+
+#task {
+    height: 26px;
+    font-size: 20px;
+    font-family: verdana;
+    width: 200px;
+    border-style: none;
+    border-bottom-style: inset;
+}
+#task:focus {
+  outline: none;
+  border-bottom-style: dotted;
+}
+
+#hidehistory {
+  background-color: seashell;
+  color: black;
+  display: block;
+
+  position: absolute;
+  -webkit-app-region: no-drag;
+
+  bottom: 0px;
+  right: 0px;
+
+}
+
+div.tasks {
+
+  margin: 30px 10px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 20px;
+  text-align: left;
 }
 /* NOTE: TEMPORARIO PAUSE BUTAO */
